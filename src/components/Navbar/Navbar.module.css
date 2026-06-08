@@ -1,0 +1,96 @@
+.nav {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 1000;
+height: var(--nav-height);
+transition: var(--transition);
+}
+.scrolled {
+background: rgba(0,0,0,0.92);
+backdrop-filter: blur(20px);-webkit-backdrop-filter: blur(20px);
+border-bottom: 1px solid var(--glass-border);
+box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+}
+.inner {
+display: flex;
+align-items: center;
+gap: 24px;
+height: 100%;
+}
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+font-family: var(--font-display);
+font-size: 22px;
+letter-spacing: 2px;
+color: var(--white);
+flex-shrink: 0;
+}
+.logo em { color: var(--gold); font-style: normal; }
+.logoIcon { color: var(--red); font-size: 20px; }
+.links {
+display: flex;
+align-items: center;
+gap: 2px;
+flex: 1;
+justify-content: center;
+}
+.link {
+font-family: var(--font-heading);
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: var(--gray-lighter);
+padding: 8px 12px;
+border-radius: var(--radius);
+transition: var(--transition);
+position: relative;
+}
+.link::after {
+content: '';
+position: absolute;
+bottom: 2px; left: 50%;
+transform: translateX(-50%);
+width: 0; height: 2px;
+background: var(--gold);
+transition: var(--transition);
+}
+.link:hover { color: var(--white); }
+.link:hover::after { width: 60%; }
+.active { color: var(--gold) !important; }
+.active::after { width: 60% !important; }
+.hamburger {
+display: none;
+color: var(--white);
+font-size: 22px;
+padding: 8px;
+margin-left: auto;
+}
+.mobile {
+position: fixed;
+inset: 0;
+top: var(--nav-height);
+background: rgba(0,0,0,0.97);
+backdrop-filter: blur(20px);
+z-index: 999;
+padding: 40px clamp(16px, 6vw, 48px);
+overflow-y: auto;
+}
+.mobileLinks { display: flex; flex-direction: column; gap: 4px; }
+.mobileLink {
+display: block;
+font-family: var(--font-display);
+font-size: clamp(32px, 10vw, 52px);
+color: var(--gray-lighter);
+padding: 8px 0;
+border-bottom: 1px solid var(--glass-border);
+transition: var(--transition);
+}
+.mobileLink:hover, .mobileActive { color: var(--gold) !important; }
+@media (max-width: 1024px) {
+.links { display: none; }
+.hamburger { display: flex; }
+.inner > a.btn-primary { display: none; }
+}

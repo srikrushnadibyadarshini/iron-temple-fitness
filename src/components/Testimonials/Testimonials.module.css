@@ -1,0 +1,74 @@
+.section { background: var(--black-3); }
+.header { margin-bottom: 48px; }
+.sliderWrap {
+max-width: 800px; margin: 0 auto 60px;
+background: var(--glass);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-lg);
+padding: clamp(28px, 5vw, 56px);
+position: relative;
+min-height: 280px;
+display: flex; flex-direction: column;
+}
+.slide { flex: 1; }
+.quote { font-size: 32px; color: var(--red); opacity: 0.6; margin-bottom: 20px; }
+.text {
+font-size: clamp(15px, 2vw, 18px);
+color: var(--white-soft);
+line-height: 1.75;
+font-style: italic;
+font-weight: 300;
+margin-bottom: 24px;
+}
+.stars { display: flex; gap: 4px; color: var(--gold); font-size: 14px; margin-bottom: 20px; }
+.author { display: flex; align-items: center; gap: 16px; }
+.author img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid
+var(--red); }
+.author strong { display: block; font-family: var(--font-heading); font-size: 16px; font-weight: 700;
+color: var(--white); }
+.author span { font-size: 13px; color: var(--gold); font-family: var(--font-heading); font-weight:
+600; letter-spacing: 0.5px; }
+.controls { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 28px;
+padding-top: 24px; border-top: 1px solid var(--glass-border); }
+.controls button {
+width: 40px; height: 40px;
+display: flex; align-items: center; justify-content: center;
+border: 1px solid var(--glass-border);
+border-radius: 50%;
+color: var(--gray-lighter);
+font-size: 14px;
+transition: var(--transition);
+}
+.controls button:hover { background: var(--red); border-color: var(--red); color: var(--white); }
+.dots { display: flex; gap: 8px; }
+.dot {
+width: 8px; height: 8px;
+border-radius: 50%;
+background: var(--gray-dark);
+transition: var(--transition);
+}
+.dotActive { background: var(--gold); transform: scale(1.3); }
+.grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 16px;
+}
+.proofCard {
+background: var(--glass);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-lg);
+padding: 28px 20px;
+text-align: center;
+transition: var(--transition);
+}
+.proofCard:hover { border-color: var(--gold-glow); }
+.proofStat {
+font-family: var(--font-display);
+font-size: clamp(32px, 4vw, 48px);
+color: var(--gold);
+margin-bottom: 8px;
+}
+.proofLabel { font-size: 13px; color: var(--gray-light); font-family: var(--font-heading);
+letter-spacing: 0.5px; }
+@media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 400px) { .grid { grid-template-columns: 1fr; } }

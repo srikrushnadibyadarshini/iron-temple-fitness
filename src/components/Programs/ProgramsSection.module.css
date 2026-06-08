@@ -1,0 +1,92 @@
+.section { background: var(--black); }
+.header { margin-bottom: 60px; max-width: 600px; }
+.grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+.card {
+background: var(--glass);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-lg);
+overflow: hidden;
+cursor: pointer;
+transition: var(--transition);
+position: relative;
+}
+.card::before {
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 3px;
+background: var(--glass-border);
+transition: var(--transition);
+}
+.card.red::before { background: var(--red); }
+.card.gold::before { background: var(--gold); }
+.card:hover { border-color: rgba(255,255,255,0.15); background: var(--glass-hover); }
+.cardInner { padding: 28px; }
+.cardTop { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.iconWrap {
+width: 52px; height: 52px;
+display: flex; align-items: center; justify-content: center;
+border-radius: var(--radius);
+font-size: 22px;
+background: var(--black-4);
+border: 1px solid var(--glass-border);
+}
+.card.red .iconWrap { color: var(--red); }
+.card.gold .iconWrap { color: var(--gold); }
+.cardTag {
+font-family: var(--font-heading);
+font-size: 10px; font-weight: 700;
+letter-spacing: 2px;
+padding: 4px 10px;
+border-radius: 20px;
+background: var(--black-4);
+border: 1px solid var(--glass-border);
+color: var(--gray-lighter);
+}
+.card.red .cardTag { color: var(--red); border-color: var(--red-glow); }
+.card.gold .cardTag { color: var(--gold); border-color: var(--gold-glow); }
+.cardTitle {
+font-family: var(--font-heading);
+font-size: 22px; font-weight: 700;
+letter-spacing: 1px;
+margin-bottom: 12px;
+color: var(--white);
+}
+.cardDesc {
+font-size: 14px;
+color: var(--gray-light);
+line-height: 1.65;
+margin-bottom: 20px;
+}
+.meta {
+display: flex; flex-wrap: wrap; gap: 12px;
+margin-bottom: 24px;
+padding-top: 16px;
+border-top: 1px solid var(--glass-border);
+}
+.metaItem {
+display: flex; align-items: center; gap: 6px;
+font-size: 12px; color: var(--gray-light);
+font-family: var(--font-heading);
+font-weight: 600; letter-spacing: 0.5px;
+}
+.metaItem svg { font-size: 11px; color: var(--gold); }
+.cardBtn {
+display: inline-block;
+font-family: var(--font-heading);
+font-size: 12px; font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(--gray-lighter);
+transition: var(--transition);
+}
+.card.red .cardBtn:hover { color: var(--red); }
+.card.gold .cardBtn:hover { color: var(--gold); }
+.cta { text-align: center; margin-top: 48px; }
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } 
+}

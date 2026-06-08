@@ -1,0 +1,12 @@
+.why { background: var(--black-2); }
+.perksGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px; }
+.perk { display: flex; gap: 24px; align-items: flex-start; }
+.perkNum {
+font-family: var(--font-display); font-size: 48px; color: var(--red); opacity: 0.4;
+line-height: 1; flex-shrink: 0; transition: var(--transition);
+}
+.perk:hover .perkNum { opacity: 1; }
+.perkTitle { font-family: var(--font-heading); font-size: 18px; font-weight: 700; letter-spacing:
+0.5px; margin-bottom: 8px; color: var(--white); }
+.perkDesc { font-size: 14px; color: var(--gray-light); line-height: 1.7; }
+@media (max-width: 600px) { .perksGrid { grid-template-columns: 1fr; } }

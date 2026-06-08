@@ -1,0 +1,99 @@
+.plans { background: var(--black); }
+.header { margin-bottom: 56px; max-width: 640px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.card {
+background: var(--glass);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-lg);
+padding: 36px 28px;
+position: relative;
+transition: var(--transition);
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
+.cardRed {
+border-color: var(--red);
+background: rgba(200,16,46,0.06);
+transform: scale(1.03);
+}
+.cardRed:hover { transform: scale(1.03) translateY(-6px); }
+.cardGold { border-color: var(--gold-dark); background: rgba(201,168,76,0.05); }
+.badge {
+position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+background: var(--red); color: var(--white);
+font-family: var(--font-heading); font-size: 11px; font-weight: 700;
+letter-spacing: 2px; padding: 5px 16px; border-radius: 20px;
+white-space: nowrap; display: flex; align-items: center; gap: 6px;
+}
+.cardGold .badge { background: var(--gold); color: var(--black); }
+.planName {
+font-family: var(--font-display); font-size: 36px;
+letter-spacing: 3px; color: var(--white); margin-bottom: 16px;
+}
+.cardRed .planName { color: var(--red); }
+.cardGold .planName { color: var(--gold); }
+.price { display: flex; align-items: flex-end; gap: 4px; margin-bottom: 24px; }
+.dollar { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color:
+var(--gray-light); margin-bottom: 8px; }
+.amount { font-family: var(--font-display); font-size: 64px; line-height: 1; color: var(--white); }
+.per { font-family: var(--font-heading); font-size: 14px; color: var(--gray-light); margin-bottom:
+10px; }
+.divider { height: 1px; background: var(--glass-border); margin-bottom: 24px; }
+.features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.feature { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--gray-lighter);
+}
+.featureNo { color: var(--gray); opacity: 0.5; }
+.check { color: var(--gold); font-size: 12px; flex-shrink: 0; }
+.cross { color: var(--gray); font-size: 12px; flex-shrink: 0; }
+.planBtn {
+display: flex; align-items: center; justify-content: center; gap: 8px;
+width: 100%; padding: 14px;
+font-family: var(--font-heading); font-size: 13px; font-weight: 700;
+letter-spacing: 2px; text-transform: uppercase;
+border-radius: var(--radius); transition: var(--transition);
+margin-bottom: 12px;
+}
+.planBtnDefault { background: var(--glass); border: 1px solid var(--glass-border); color:
+var(--white); }
+.planBtnDefault:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+.planBtnRed { background: var(--red); color: var(--white); }
+.planBtnRed:hover { background: var(--red-bright); box-shadow: 0 8px 24px var(--red-glow); transform:
+translateY(-2px); }
+.planBtnGold { background: var(--gold); color: var(--black); }
+.planBtnGold:hover { background: var(--gold-light); box-shadow: 0 8px 24px var(--gold-glow);
+transform: translateY(-2px); }
+.noContract { text-align: center; font-size: 12px; color: var(--gray); }
+.perks {
+display: flex; flex-wrap: wrap; justify-content: center; gap: 32px;
+margin-top: 48px; padding-top: 40px;
+border-top: 1px solid var(--glass-border);
+}
+.perk { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--gray-lighter);
+font-family: var(--font-heading); font-weight: 600; }
+.perkCheck { color: var(--gold); }
+.compare { background: var(--black-2); }
+.tableWrap { margin-top: 40px; overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid
+var(--glass-border); }
+.table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.table thead tr { background: var(--black-4); }
+.table th {
+padding: 16px 20px; text-align: center;
+font-family: var(--font-heading); font-size: 14px; font-weight: 700;
+letter-spacing: 1px; color: var(--white);
+border-bottom: 1px solid var(--glass-border);
+}
+.table th span { display: block; font-size: 11px; color: var(--gray-light); font-weight: 400;
+margin-top: 2px; }
+.thHighlight { background: rgba(200,16,46,0.1) !important; color: var(--red) !important; }
+.table td { padding: 14px 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.04);
+font-size: 14px; color: var(--gray-lighter); }
+.table tr:last-child td { border-bottom: none; }
+.featName { text-align: left !important; font-weight: 500; color: var(--white); }
+.tdHighlight { background: rgba(200,16,46,0.04); }
+.yes { color: var(--gold); }
+.no { color: var(--gray-dark); }
+.val { font-size: 13px; color: var(--gold); font-family: var(--font-heading); font-weight: 600; }
+@media (max-width: 900px) {
+.grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+.cardRed { transform: none; }
+.cardRed:hover { transform: translateY(-6px); }
+}

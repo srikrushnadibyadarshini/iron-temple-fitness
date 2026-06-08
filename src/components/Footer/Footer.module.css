@@ -1,0 +1,173 @@
+/* ─── Wrapper ─────────────────────────────────────────── */
+.footer {
+  background: var(--black-2);
+  border-top: 1px solid var(--glass-border);
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 48px);
+}
+
+/* ─── Top Section ─────────────────────────────────────── */
+.top {
+  padding: 80px 0 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: 48px;
+}
+
+/* ─── Brand Column ────────────────────────────────────── */
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+.logo em { color: var(--gold); font-style: normal; }
+.logoIcon { color: var(--red); font-size: 20px; flex-shrink: 0; }
+
+.brandDesc {
+  color: var(--gray-light);
+  font-size: 14px;
+  line-height: 1.75;
+  max-width: 260px;
+  margin-bottom: 24px;
+}
+
+.socials { display: flex; gap: 10px; }
+.socials a {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  color: var(--gray-light);
+  font-size: 16px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.socials a:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+/* ─── Link Columns ────────────────────────────────────── */
+.col { display: flex; flex-direction: column; }
+
+.colHeading {
+  font-family: var(--font-heading);
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.linkList {
+  display: flex; flex-direction: column; gap: 10px;
+  list-style: none; padding: 0; margin: 0;
+}
+
+.navLink {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--gray-light); font-size: 14px;
+  text-decoration: none; transition: var(--transition);
+}
+.navLink:hover { color: var(--white); padding-left: 4px; }
+.linkArrow {
+  font-size: 9px; color: var(--red);
+  flex-shrink: 0; opacity: 0;
+  transition: var(--transition);
+}
+.navLink:hover .linkArrow { opacity: 1; }
+
+/* ─── Contact Column ──────────────────────────────────── */
+.contactList {
+  display: flex; flex-direction: column; gap: 16px;
+  list-style: none; padding: 0; margin: 0 0 20px 0;
+}
+
+.contactItem {
+  display: flex; align-items: flex-start; gap: 12px;
+  color: var(--gray-light); font-size: 14px; line-height: 1.55;
+}
+
+.contactIcon {
+  color: var(--red); font-size: 15px;
+  margin-top: 2px; flex-shrink: 0;
+}
+
+.hours {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+
+.hoursRow {
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 8px;
+}
+
+.hoursDay {
+  font-family: var(--font-heading);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.5px; color: var(--white);
+}
+
+.hoursTime {
+  font-size: 12px; color: var(--gold);
+  font-family: var(--font-heading); font-weight: 600;
+}
+
+/* ─── Bottom Bar ──────────────────────────────────────── */
+.bottom {
+  border-top: 1px solid var(--glass-border);
+  padding: 20px 0;
+}
+
+.bottom .container {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+
+.copyright { font-size: 13px; color: var(--gray); margin: 0; }
+
+.legal { display: flex; gap: 24px; flex-wrap: wrap; }
+.legal a {
+  font-size: 13px; color: var(--gray);
+  text-decoration: none; transition: var(--transition);
+}
+.legal a:hover { color: var(--gold); }
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+@media (max-width: 600px) {
+  .top { padding: 56px 0 40px; }
+  .grid { grid-template-columns: 1fr; gap: 36px; }
+  .brandDesc { max-width: 100%; }
+  .legal { gap: 16px; }
+  .hoursRow { flex-direction: column; align-items: flex-start; gap: 2px; }
+}
