@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaShieldAlt, FaFire, FaTrophy, FaHeart } from 'react-icons/fa'
 import PageTransition from '../../components/PageTransition'
-import PageHeader from '../../components/PageHeader'
+import PageHeader from '../../components/PageHeader.jsx'
 import Stats from '../../components/Stats/Stats'
 import styles from './About.module.css'
 const values = [
