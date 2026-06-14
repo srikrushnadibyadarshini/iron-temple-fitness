@@ -1,5 +1,5 @@
 import PageTransition from '../../components/PageTransition'
-import PageHeader from '../../components/PageHeader'
+import PageHeader from '../../components/PageHeader.jsx'
 import ProgramsSection from '../../components/Programs/ProgramsSection'
 import Schedule from '../../components/Schedule/Schedule'
 import { motion } from 'framer-motion'
