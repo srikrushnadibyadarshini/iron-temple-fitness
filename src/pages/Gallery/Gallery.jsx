@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import PageTransition from '../../components/PageTransition'
-import PageHeader from '../../components/PageHeader'
+import PageHeader from '../../components/PageHeader/PageHeader'
 import { galleryImages } from '../../data/index'
 import styles from './Gallery.module.css'
 export default function Gallery() {

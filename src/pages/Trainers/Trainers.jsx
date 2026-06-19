@@ -1,5 +1,5 @@
 import PageTransition from '../../components/PageTransition'
-import PageHeader from '../../components/PageHeader'
+import PageHeader from '../../components/PageHeader/PageHeader'
 import TrainersSection from '../../components/Trainers/TrainersSection'
 export default function Trainers() {
 return (

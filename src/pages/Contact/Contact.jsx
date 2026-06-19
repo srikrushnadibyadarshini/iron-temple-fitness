@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaInstagram, FaFacebook, FaYoutube, FaCheck }
 from 'react-icons/fa'
 import PageTransition from '../../components/PageTransition'
-import PageHeader from '../../components/PageHeader'
+import PageHeader from '../../components/PageHeader/PageHeader'
 import styles from './Contact.module.css'
 const contactInfo = [
 { icon: FaMapMarkerAlt, label: 'Address', value: '123 Iron District, Fitness Quarter, New York, NY 10001' },
